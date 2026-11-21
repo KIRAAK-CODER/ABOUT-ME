@@ -189,6 +189,30 @@
       font-weight: 600;
       background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
     }
+    .tools {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .tool {
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      background: var(--accent-soft);
+    }
+    .tool h3 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+    }
+    .tool p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
     footer {
       margin-top: 24px;
       text-align: center;
@@ -217,6 +241,40 @@
         <p>I create social media content with AI, from short videos to captions and posts, for channels that want to grow.</p>
       </div>
       <ul class="videos" id="videos"></ul>
+
+      <hr>
+
+      <h2>Skills &amp; Tools</h2>
+      <ul class="tools">
+        <li class="tool">
+          <h3>Claude</h3>
+          <p>I use it to plan ideas and write and refine scripts and content.</p>
+        </li>
+        <li class="tool">
+          <h3>Claude Code</h3>
+          <p>I use it to build and update my websites right from the terminal.</p>
+        </li>
+        <li class="tool">
+          <h3>ChatGPT</h3>
+          <p>I use it to brainstorm ideas and draft captions and posts.</p>
+        </li>
+        <li class="tool">
+          <h3>Gemini</h3>
+          <p>I use it to research topics and compare ideas.</p>
+        </li>
+        <li class="tool">
+          <h3>Git</h3>
+          <p>I use it to track every change to my projects, step by step.</p>
+        </li>
+        <li class="tool">
+          <h3>GitHub</h3>
+          <p>I use it to keep my code safe online and share my projects.</p>
+        </li>
+        <li class="tool">
+          <h3>VS Code</h3>
+          <p>I use it to read and edit the code of my websites.</p>
+        </li>
+      </ul>
 
       <hr>
 
