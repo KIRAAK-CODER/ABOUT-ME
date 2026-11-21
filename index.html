@@ -12,8 +12,8 @@
       --text: #1a1a1a;
       --muted: #5f6368;
       --line: #e6e6e3;
-      --accent: #4f46e5;
-      --accent-soft: #eef0ff;
+      --accent: #e57346;
+      --accent-soft: #f1e2e7;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -22,7 +22,7 @@
         --text: #f1f1f1;
         --muted: #a0a4ab;
         --line: #2a2c30;
-        --accent: #8b85ff;
+        --accent: #edc009;
         --accent-soft: #23234a;
       }
     }
@@ -41,7 +41,7 @@
     }
     main {
       width: 100%;
-      max-width: 720px;
+      max-width: 640px;
     }
     .card {
       background: var(--card);
@@ -124,54 +124,6 @@
       overflow-wrap: anywhere;
       text-align: right;
     }
-    .about-text {
-      margin: 0 0 20px;
-      color: var(--muted);
-    }
-    .videos {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      gap: 12px;
-    }
-    .videos a {
-      position: relative;
-      display: block;
-      aspect-ratio: 9 / 16;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      background: var(--accent-soft);
-      color: #fff;
-      text-decoration: none;
-    }
-    .videos img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.2s;
-    }
-    .videos a:hover img,
-    .videos a:focus-visible img {
-      transform: scale(1.05);
-    }
-    .videos a:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
-    .videos .tag {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 18px 10px 8px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
-    }
     footer {
       margin-top: 24px;
       text-align: center;
@@ -193,24 +145,18 @@
 
       <hr>
 
-      <h2>What I do</h2>
-      <p class="about-text">I use AI to build websites and create content. My YouTube Shorts series on the Seerah is one example. Tap any video to watch it.</p>
-      <ul class="videos" id="videos"></ul>
-
-      <hr>
-
       <h2>Contact</h2>
       <ul class="contact">
         <li>
-          <a href="mailto:mdmuzammilbhurani@gmail.com">
+          <a href="mailto:you@example.com">
             <span class="label">Email</span>
-            <span class="value">mdmuzammilbhurani@gmail.com</span>
+            <span class="value">studentyard1@gmail.com</span>
           </a>
         </li>
         <li>
-          <a href="https://www.youtube.com/@MUHAMMAD-78645/shorts" target="_blank" rel="noopener">
-            <span class="label">YouTube</span>
-            <span class="value">@MUHAMMAD-78645</span>
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">
+            <span class="label">LinkedIn</span>
+            <span class="value">linkedin.com/in/your-profile</span>
           </a>
         </li>
         <li>
@@ -225,42 +171,6 @@
   </main>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // YouTube Shorts: [video id, label]. Add new ones at the top of this list.
-    var shorts = [
-      ["J1TMOARmNYQ", "EP 22"], ["rLyzsQqu6Sw", "EP 21"], ["L_Jlkxe-DdM", "EP 20"],
-      ["jEjUsCu-fyk", "EP 19"], ["nWh4n3inFlI", "EP 18"], ["WEI58PGuPNk", "EP 17"],
-      ["GysJDIjif9o", "EP 16"], ["RMyZDE6ncI0", "EP 15"], ["uJ8OdExsFcE", "EP 14"],
-      ["jdsew4F_gcs", "EP 13"], ["-_ziNawfYuQ", "EP 12"], ["f6MEEctyi-M", "EP 11"],
-      ["QllSG66sC2I", "EP 10"], ["xOdK9PDoPNs", "EP 9"], ["JV63YkzpeGg", "EP 8"],
-      ["AUjtNHBZCbA", "EP 7"], ["-PT_bsunj-U", "EP 6"], ["f8XY35Cr0P4", "EP 5"],
-      ["ParU0-EezKo", "EP 4"], ["QCJy51CwI6E", "EP 3"], ["nUPk_jnYGVk", "EP 2"],
-      ["fXPKhk4MFgw", "EP 1"], ["STDzMeoLF6U", "The Seerah Series (intro)"]
-    ];
-    var list = document.getElementById("videos");
-    shorts.forEach(function (s) {
-      var li = document.createElement("li");
-      var a = document.createElement("a");
-      a.href = "https://www.youtube.com/shorts/" + s[0];
-      a.target = "_blank";
-      a.rel = "noopener";
-      a.setAttribute("aria-label", "Watch " + s[1] + " on YouTube");
-      var img = document.createElement("img");
-      img.loading = "lazy";
-      img.alt = "";
-      img.src = "https://i.ytimg.com/vi/" + s[0] + "/frame0.jpg";
-      img.onerror = function () {
-        img.onerror = null;
-        img.src = "https://i.ytimg.com/vi/" + s[0] + "/hqdefault.jpg";
-      };
-      var tag = document.createElement("span");
-      tag.className = "tag";
-      tag.textContent = s[1];
-      a.appendChild(img);
-      a.appendChild(tag);
-      li.appendChild(a);
-      list.appendChild(li);
-    });
   </script>
 </body>
 </html>
