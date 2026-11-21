@@ -10,7 +10,7 @@ A single-page personal "About" site for Mohammed Muzammil Bhurani (MMB). The who
 
 - **Theming:** colors are CSS variables on `:root`, overridden in a `prefers-color-scheme: dark` block. The accent differs per scheme (orange in light, golden in dark), so change both blocks when adjusting the palette.
 - **Sections:** a single `.card` containing intro, "What I do" (an `.info-card` plus the video grid), and Contact links.
-- **Video grid:** `#videos` is empty in the HTML and populated by the inline script from the `shorts` array of `[youtubeVideoId, label]` pairs. To add an episode, prepend an entry to that array (newest first). Thumbnails come from `i.ytimg.com/.../frame0.jpg`, falling back to `hqdefault.jpg` on error.
+- **Video grid:** `#videos` is empty in the HTML and populated by the inline script from the `shorts` array of `[youtubeVideoId, label]` pairs. To add an episode, prepend an entry to that array (newest first). Thumbnails come from `i.ytimg.com/.../hqdefault.jpg` (falling back to `mqdefault.jpg` on error). Don't use `frame0.jpg`: YouTube returns a black image for it on many Shorts, with HTTP 200, so `onerror` never fires.
 - **Placeholders:** the Instagram contact link still points to `https://instagram.com/your-handle`. Replace it when the real handle is known.
 - The footer year is set at runtime from `new Date().getFullYear()`.
 

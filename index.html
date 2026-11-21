@@ -327,10 +327,11 @@
       var img = document.createElement("img");
       img.loading = "lazy";
       img.alt = "";
-      img.src = "https://i.ytimg.com/vi/" + s[0] + "/frame0.jpg";
+      // frame0.jpg returns a black image for many Shorts, so use hqdefault.jpg
+      img.src = "https://i.ytimg.com/vi/" + s[0] + "/hqdefault.jpg";
       img.onerror = function () {
         img.onerror = null;
-        img.src = "https://i.ytimg.com/vi/" + s[0] + "/hqdefault.jpg";
+        img.src = "https://i.ytimg.com/vi/" + s[0] + "/mqdefault.jpg";
       };
       var tag = document.createElement("span");
       tag.className = "tag";
