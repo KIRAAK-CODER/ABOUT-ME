@@ -19,5 +19,6 @@ A single-page personal "About" site for Mohammed Muzammil Bhurani (MMB). The who
 1. Always check for API key leakage in the frontend.
 2. Make changes in small steps.
 3. After every change, ask the user whether to commit.
-4. Review code thoroughly while writing it; the website must not crash.
-5. After every change, first check your own work for errors, and report any you find to the user.
+4. After every change, open the site with Playwright, click through whatever changed to test it, and show the user a screenshot.
+5. If you find an error, tell the user first; do not make big changes on your own to fix it.
+6. Never add fake or placeholder data. If you don't know the information, ask the user.
